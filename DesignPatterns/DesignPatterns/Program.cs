@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CursoDesignPatterns
+namespace DesignPatterns
 {
     class Program
     {

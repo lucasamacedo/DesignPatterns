@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Github Projetos\\DesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj": {}
+    "D:\\Github Projetos\\DesignPatterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj": {}
   },
   "projects": {
-    "D:\\Github Projetos\\DesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj": {
+    "D:\\Github Projetos\\DesignPatterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Github Projetos\\DesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj",
-        "projectName": "CursoDesignPatterns",
-        "projectPath": "D:\\Github Projetos\\DesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns.csproj",
+        "projectUniqueName": "D:\\Github Projetos\\DesignPatterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj",
+        "projectName": "DesignPatterns",
+        "projectPath": "D:\\Github Projetos\\DesignPatterns\\DesignPatterns\\DesignPatterns\\DesignPatterns.csproj",
         "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "D:\\Github Projetos\\DesignPatterns\\CursoDesignPatterns\\CursoDesignPatterns\\obj\\",
+        "outputPath": "D:\\Github Projetos\\DesignPatterns\\DesignPatterns\\DesignPatterns\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,7 +21,7 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.1"
+          "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -35,8 +35,8 @@
           "https://grpc.jfrog.io/grpc/api/nuget/v3/grpc-nuget-dev": {}
         },
         "frameworks": {
-          "netcoreapp2.1": {
-            "targetAlias": "netcoreapp2.1",
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -47,16 +47,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.1": {
-          "targetAlias": "netcoreapp2.1",
-          "dependencies": {
-            "Microsoft.NETCore.App": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.1.0, )",
-              "autoReferenced": true
-            }
-          },
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -67,6 +59,11 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
