@@ -1,0 +1,13 @@
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\obj\Debug\netcoreapp3.1\Aula2.csproj.AssemblyReference.cache
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\obj\Debug\netcoreapp3.1\Aula2.AssemblyInfoInputs.cache
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\obj\Debug\netcoreapp3.1\Aula2.AssemblyInfo.cs
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\obj\Debug\netcoreapp3.1\Aula2.csproj.CoreCompileInputs.cache
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\bin\Debug\netcoreapp3.1\Aula2.exe
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\bin\Debug\netcoreapp3.1\Aula2.deps.json
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\bin\Debug\netcoreapp3.1\Aula2.runtimeconfig.json
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\bin\Debug\netcoreapp3.1\Aula2.runtimeconfig.dev.json
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\bin\Debug\netcoreapp3.1\Aula2.dll
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\bin\Debug\netcoreapp3.1\Aula2.pdb
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\obj\Debug\netcoreapp3.1\Aula2.dll
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\obj\Debug\netcoreapp3.1\Aula2.pdb
+D:\Github Projetos\DesignPatterns\DesignPatterns\Aula2\obj\Debug\netcoreapp3.1\Aula2.genruntimeconfig.cache

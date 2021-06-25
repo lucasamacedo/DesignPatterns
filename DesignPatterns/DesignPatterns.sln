@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31402.337
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{69F6CF00-9697-4FE2-96BE-EDED547B8454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{69F6CF00-9697-4FE2-96BE-EDED547B8454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula2", "Aula2\Aula2.csproj", "{1A218BC1-5968-4EFD-8119-B5929D087751}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{69F6CF00-9697-4FE2-96BE-EDED547B8454}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69F6CF00-9697-4FE2-96BE-EDED547B8454}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69F6CF00-9697-4FE2-96BE-EDED547B8454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A218BC1-5968-4EFD-8119-B5929D087751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A218BC1-5968-4EFD-8119-B5929D087751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A218BC1-5968-4EFD-8119-B5929D087751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A218BC1-5968-4EFD-8119-B5929D087751}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
