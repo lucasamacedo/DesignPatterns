@@ -18,7 +18,7 @@ namespace DesignPatterns.Aula3
 
         public override double MinimaTaxacao(Orcamento orcamento)
         {
-            return MinimaTaxacao(orcamento);
+            return orcamento.Valor * 0.06;
         }
 
         private bool temItemMaiorque100ReaisNo(Orcamento orcamento)
