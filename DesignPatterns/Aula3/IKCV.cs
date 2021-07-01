@@ -6,6 +6,8 @@ namespace DesignPatterns.Aula3
 {
     public class IKCV : TemplateDeImpostoCondicional
     {
+        public IKCV() : base() { }
+        public IKCV(Imposto outroImposto) : base(outroImposto) { }
         public override bool DeveUsarMaximaTaxacao(Orcamento orcamento)
         {
             return orcamento.Valor > 500 && temItemMaiorque100ReaisNo(orcamento);
