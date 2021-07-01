@@ -45,8 +45,19 @@ namespace DesignPatterns.Aula3
 
             reforma.AplicaDescontoExtra();
             Console.WriteLine(reforma.Valor);
+            //reforma.AplicaDescontoExtra();
+            //Console.WriteLine(reforma.Valor);
             reforma.Finaliza();
-            reforma.AplicaDescontoExtra();
+
+            Conta conta = new Conta("Titular", "28234-5", "AG", 600, DateTime.Now);
+            Console.WriteLine(conta.Saldo);
+            conta.ChecaEstado();
+            conta.Saca(700);
+            Console.WriteLine(conta.Saldo);
+            conta.ChecaEstado();
+            conta.Deposita(700);
+            Console.WriteLine(conta.Saldo);
+            conta.ChecaEstado();
         }
     }
 }
