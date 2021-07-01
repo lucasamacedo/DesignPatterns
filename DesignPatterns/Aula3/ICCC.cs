@@ -6,7 +6,7 @@ namespace DesignPatterns.Aula3
 {
     public class ICCC : Imposto
     {
-        public double Calcula(Orcamento orcamento)
+        public override double Calcula(Orcamento orcamento)
         {
             if (orcamento.Valor < 1000)
                 return orcamento.Valor * 0.05;

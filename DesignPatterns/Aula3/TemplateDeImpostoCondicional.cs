@@ -10,7 +10,7 @@ namespace DesignPatterns.Aula3
         public abstract bool DeveUsarMaximaTaxacao(Orcamento orcamento);
         public abstract double MaximaTaxacao(Orcamento orcamento);
         public abstract double MinimaTaxacao(Orcamento orcamento);
-        public double Calcula(Orcamento orcamento)
+        public override double Calcula(Orcamento orcamento)
         {
             if (DeveUsarMaximaTaxacao(orcamento))
             {

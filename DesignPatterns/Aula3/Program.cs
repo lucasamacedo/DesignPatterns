@@ -7,34 +7,16 @@ namespace DesignPatterns.Aula3
     {
         static void Main(string[] args)
         {
-            // aula 3
+            Imposto iss = new ISS(new ICMS(new IKCV()));
 
-            Orcamento orcamento = new Orcamento(600);
-            orcamento.AdicionaItem(new Item("CANETA", 500));
-            orcamento.AdicionaItem(new Item("LAPIS", 500));
-            orcamento.AdicionaItem(new Item("GELADEIRA", 500));
-            orcamento.AdicionaItem(new Item("FOGAO", 500));
-            //orcamento.AdicionaItem(new Item("CANETA", 500));
-            orcamento.AdicionaItem(new Item("MICROONDAS", 500));
+            Orcamento orcamento = new Orcamento(500);
 
-            IKCV iKCV = new IKCV();
-            ICPP iCPP = new ICPP();
+            double valor = iss.Calcula(orcamento);
             
-            Console.WriteLine(iKCV.Calcula(orcamento));
-            Console.WriteLine(iCPP.Calcula(orcamento));
-            
-            // Exercicios aula 3
-            IHIT iHIT = new IHIT();
-            Console.WriteLine(iHIT.Calcula(orcamento));
-            Console.WriteLine();
+            Console.WriteLine(valor);
 
-            RelatorioSimples rS = new RelatorioSimples();
-            RelatorioComplexo rC = new RelatorioComplexo();
-
-            IList<Conta> contas = new List<Conta> { new Conta("Titular1", "1324", "AG", 750.0) , new Conta("Titular2", "5678", "TY", 1225.0) };
-
-            rS.Imprime(contas);
-            rC.Imprime(contas);
+            Imposto impostos = new ImpostoMuitoAlto(new ICMS());
+            Console.WriteLine(impostos.Calcula(orcamento));
         }
     }
 }
