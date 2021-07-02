@@ -17,8 +17,9 @@ namespace DesignPatterns.Aula3
 
         private IList<AcaoAposGerarNota> todasAcoesASeremExecutadas = new List<AcaoAposGerarNota>();
 
-        public NotaFiscalBuilder()
+        public NotaFiscalBuilder(IList<AcaoAposGerarNota> lista)
         {
+            todasAcoesASeremExecutadas = lista;
             Data = DateTime.Now;
         }
 

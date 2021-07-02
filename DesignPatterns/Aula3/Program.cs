@@ -94,7 +94,8 @@ namespace DesignPatterns.Aula3
                 .ComObservacoes("Uma observacao")
                 .AdicionaAcao(new EnviadorDeEmail())
                 .AdicionaAcao(new NotaFiscalDao())
-                .AdicionaAcao(new EnviadorDeSms());
+                .AdicionaAcao(new EnviadorDeSms())
+                .AdicionaAcao(new Multiplicador(10));
 
             NotaFiscal nf = criador.Constroi();
 
