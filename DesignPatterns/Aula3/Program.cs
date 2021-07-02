@@ -76,7 +76,7 @@ namespace DesignPatterns.Aula3
 
             // Com o padrão:
             ItemDaNotaBuilder itemBuilder = new ItemDaNotaBuilder();
-            NotaFiscalBuilder criador = new NotaFiscalBuilder();
+            NotaFiscalBuilder criador = new NotaFiscalBuilder(new List<AcaoAposGerarNota>());
             criador
                 .ParaEmpresa("Caelum Ensino e Inovacao")
                 .ComCnpj("23.456.789/0011-12")
