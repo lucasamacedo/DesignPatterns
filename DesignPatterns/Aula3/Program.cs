@@ -75,12 +75,21 @@ namespace DesignPatterns.Aula3
             //NotaFiscal nf = new NotaFiscal("razao", "cnpj", DateTime.Now, valorTotal, impostos, itens, "observacao");
 
             // Com o padrão:
+            ItemDaNotaBuilder itemBuilder = new ItemDaNotaBuilder();
             NotaFiscalBuilder criador = new NotaFiscalBuilder();
             criador
                 .ParaEmpresa("Caelum Ensino e Inovacao")
                 .ComCnpj("23.456.789/0011-12")
-                .ComItem(new ItemDaNota("Item 1", 100))
-                .ComItem(new ItemDaNota("Item 2", 200))
+                .Com(
+                    itemBuilder
+                        .ComNome("Item 1")
+                        .ComValor(100)
+                        .Constroi())
+                .Com(
+                    itemBuilder
+                        .ComNome("Item 2")
+                        .ComValor(200)
+                        .Constroi())
                 .NaDataAtual()
                 .ComObservacoes("Uma observacao");
 

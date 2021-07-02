@@ -15,6 +15,11 @@ namespace DesignPatterns.Aula3
         private double impostos;
         private IList<ItemDaNota> todosItens = new List<ItemDaNota>();
 
+        public NotaFiscalBuilder()
+        {
+            Data = DateTime.Now;
+        }
+
         public NotaFiscal Constroi()
         {
             return new NotaFiscal(RazaoSocial, Cnpj, Data, valorTotal, impostos, todosItens, Observacoes);
@@ -29,7 +34,7 @@ namespace DesignPatterns.Aula3
             Cnpj = cnpj;
             return this;
         }
-        public NotaFiscalBuilder ComItem(ItemDaNota item)
+        public NotaFiscalBuilder Com(ItemDaNota item)
         {
             todosItens.Add(item);
             valorTotal += item.Valor;
@@ -44,6 +49,11 @@ namespace DesignPatterns.Aula3
         public NotaFiscalBuilder NaDataAtual()
         {
             Data = DateTime.Now;
+            return this;
+        }
+        public NotaFiscalBuilder NaData(DateTime novaData)
+        {
+            Data = novaData;
             return this;
         }
     }
