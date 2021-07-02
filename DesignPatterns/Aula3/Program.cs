@@ -91,7 +91,10 @@ namespace DesignPatterns.Aula3
                         .ComValor(200)
                         .Constroi())
                 .NaDataAtual()
-                .ComObservacoes("Uma observacao");
+                .ComObservacoes("Uma observacao")
+                .AdicionaAcao(new EnviadorDeEmail())
+                .AdicionaAcao(new NotaFiscalDao())
+                .AdicionaAcao(new EnviadorDeSms());
 
             NotaFiscal nf = criador.Constroi();
 
