@@ -37,27 +37,57 @@ namespace DesignPatterns.Aula3
             //}
 
             // Aula 5
-            Orcamento reforma = new Orcamento(500);
-            Console.WriteLine(reforma.Valor);
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
-            reforma.Aprova();
-
-            reforma.AplicaDescontoExtra();
-            Console.WriteLine(reforma.Valor);
+            //Orcamento reforma = new Orcamento(500);
+            //Console.WriteLine(reforma.Valor);
             //reforma.AplicaDescontoExtra();
             //Console.WriteLine(reforma.Valor);
-            reforma.Finaliza();
+            //reforma.Aprova();
 
-            Conta conta = new Conta("Titular", "28234-5", "AG", 600, DateTime.Now);
-            Console.WriteLine(conta.Saldo);
-            conta.ChecaEstado();
-            conta.Saca(700);
-            Console.WriteLine(conta.Saldo);
-            conta.ChecaEstado();
-            conta.Deposita(700);
-            Console.WriteLine(conta.Saldo);
-            conta.ChecaEstado();
+            //reforma.AplicaDescontoExtra();
+            //Console.WriteLine(reforma.Valor);
+            ////reforma.AplicaDescontoExtra();
+            ////Console.WriteLine(reforma.Valor);
+            //reforma.Finaliza();
+
+            //Conta conta = new Conta("Titular", "28234-5", "AG", 600, DateTime.Now);
+            //Console.WriteLine(conta.Saldo);
+            //conta.ChecaEstado();
+            //conta.Saca(700);
+            //Console.WriteLine(conta.Saldo);
+            //conta.ChecaEstado();
+            //conta.Deposita(700);
+            //Console.WriteLine(conta.Saldo);
+            //conta.ChecaEstado();
+
+            // Aula 6
+            // Como seria sem o padrao:
+
+            //IList<ItemDaNota> itens = new List<ItemDaNota>();
+
+            //double valorTotal = 0;
+            //foreach (ItemDaNota item in itens)
+            //{
+            //    valorTotal += item.Valor;
+            //}
+
+            //double impostos = valorTotal * 0.05;
+
+            //NotaFiscal nf = new NotaFiscal("razao", "cnpj", DateTime.Now, valorTotal, impostos, itens, "observacao");
+
+            // Com o padrão:
+            NotaFiscalBuilder criador = new NotaFiscalBuilder();
+            criador
+                .ParaEmpresa("Caelum Ensino e Inovacao")
+                .ComCnpj("23.456.789/0011-12")
+                .ComItem(new ItemDaNota("Item 1", 100))
+                .ComItem(new ItemDaNota("Item 2", 200))
+                .NaDataAtual()
+                .ComObservacoes("Uma observacao");
+
+            NotaFiscal nf = criador.Constroi();
+
+            Console.WriteLine(nf.ValorBruto);
+            Console.WriteLine(nf.Impostos);
         }
     }
 }
