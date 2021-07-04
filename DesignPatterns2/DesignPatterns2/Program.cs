@@ -2,6 +2,7 @@
 using DesignPatterns2.Cap2;
 using DesignPatterns2.Cap3;
 using DesignPatterns2.Cap4;
+using DesignPatterns2.Cap5;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -24,6 +25,22 @@ namespace DesignPatterns2
             //ExecutaAula3();
 
             // Aula 4
+            //ExecutaAula4();
+
+            // Aula 5
+            // ((1 + 10) + (20 - 10))
+            // + 1 100
+            IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
+            IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            IExpressao soma = new Soma(esquerda, direita);
+
+            Console.WriteLine(soma.Avalia());
+            ImpressoraVisitor impressora = new ImpressoraVisitor();
+            soma.Aceita(impressora);
+        }
+
+        private static void ExecutaAula4()
+        {
             IExpressao esquerda = new Soma(new Soma(new Numero(1), new Numero(100)), new Numero(10));
             IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
             IExpressao soma = new Soma(esquerda, direita);
