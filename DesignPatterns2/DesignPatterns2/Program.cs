@@ -34,6 +34,17 @@ namespace DesignPatterns2
             // Aula 6
             IMensagem mensagem = new MensagemAdministrativa("Lucas");
             IEnviador enviador = new EnviaPorSMS();
+
+            mensagem.Enviador = enviador;
+            mensagem.Envia();
+            Console.WriteLine();
+
+            mensagem = new MensagemCliente("Lucas");
+            mensagem.Enviador = enviador;
+            mensagem.Envia();
+            Console.WriteLine();
+
+            enviador = new EnviaPorEmail();
             mensagem.Enviador = enviador;
             mensagem.Envia();
         }
