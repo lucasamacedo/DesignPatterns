@@ -1,5 +1,6 @@
 ﻿using DesignPatterns2.Cap1;
 using DesignPatterns2.Cap2;
+using DesignPatterns2.Cap3;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,12 +12,28 @@ namespace DesignPatterns2
     {
         static void Main(string[] args)
         {
-            //// Aula 1
-            //IDbConnection conexao = new ConnectionFactory().GetConnection();
+            // Aula 1
+            //ExecutaAula1();
 
-            //IDbCommand comando = conexao.CreateCommand();
-            //comando.CommandText = "SELECT * FROM TABELA";
+            // Aula 2
+            //ExecutaAula2();
 
+            // Aula 3
+            Historico historico = new Historico();
+            Contrato c = new Contrato(DateTime.Now, "Lucas", TipoContrato.Novo);
+            historico.Adiciona(c.SalvaEstado());
+
+            c.Avanca();
+            historico.Adiciona(c.SalvaEstado());
+
+            c.Avanca();
+            historico.Adiciona(c.SalvaEstado());
+
+            Console.WriteLine(historico.Pega(0).Contrato.Tipo);
+        }
+
+        private static void ExecutaAula2()
+        {
             NotasMusicais notas = new NotasMusicais();
             IList<INota> musica = new List<INota>()
             {
@@ -50,6 +67,14 @@ namespace DesignPatterns2
             };
             Piano piano = new Piano();
             piano.Toca(musica);
+        }
+
+        private static void ExecutaAula1()
+        {
+            IDbConnection conexao = new ConnectionFactory().GetConnection();
+
+            IDbCommand comando = conexao.CreateCommand();
+            comando.CommandText = "SELECT * FROM TABELA";
         }
     }
 }
