@@ -3,6 +3,7 @@ using DesignPatterns2.Cap2;
 using DesignPatterns2.Cap3;
 using DesignPatterns2.Cap4;
 using DesignPatterns2.Cap5;
+using DesignPatterns2.Cap6;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -28,6 +29,17 @@ namespace DesignPatterns2
             //ExecutaAula4();
 
             // Aula 5
+            //ExecutaAula5();
+
+            // Aula 6
+            IMensagem mensagem = new MensagemAdministrativa("Lucas");
+            IEnviador enviador = new EnviaPorSMS();
+            mensagem.Enviador = enviador;
+            mensagem.Envia();
+        }
+
+        private static void ExecutaAula5()
+        {
             // ((1 + 10) + (20 - 10))
             // + 1 100
             IExpressao esquerda = new Soma(new Numero(1), new Numero(10));
@@ -52,7 +64,6 @@ namespace DesignPatterns2
             Console.WriteLine("Pre-fixa:");
             exp.Aceita(prefixa);
             Console.WriteLine(" = " + exp.Avalia());
-
         }
 
         private static void ExecutaAula4()
