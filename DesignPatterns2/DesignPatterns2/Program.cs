@@ -1,10 +1,12 @@
 ﻿using DesignPatterns2.Cap1;
 using DesignPatterns2.Cap2;
 using DesignPatterns2.Cap3;
+using DesignPatterns2.Cap4;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Linq.Expressions;
 
 namespace DesignPatterns2
 {
@@ -19,6 +21,21 @@ namespace DesignPatterns2
             //ExecutaAula2();
 
             // Aula 3
+            //ExecutaAula3();
+
+            // Aula 4
+            //IExpressao esquerda = new Soma(new Soma(new Numero(1), new Numero(100)), new Numero(10));
+            //IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
+            //IExpressao soma = new Soma(esquerda, direita);
+
+            //Console.WriteLine(soma.Avalia());
+            Expression soma = Expression.Add(Expression.Constant(10), Expression.Constant(100));
+            Func<int> funcao = Expression.Lambda<Func<int>>(soma).Compile();
+            Console.WriteLine(funcao());
+        }
+
+        private static void ExecutaAula3()
+        {
             Historico historico = new Historico();
             Contrato c = new Contrato(DateTime.Now, "Lucas", TipoContrato.Novo);
             historico.Adiciona(c.SalvaEstado());
