@@ -9,6 +9,9 @@ namespace DesignPatterns2.Cap5
     {
         void ImprimeSoma(Soma soma);
         void ImprimeSubtracao(Subtracao subtracao);
+        void ImprimeMultiplicacao(Multiplicacao mult);
+        void ImprimeDivisao(Divisao div);
+        void ImprimeRaizQuadrada(RaizQuadrada rq);
         void ImprimeNumero(Numero numero);
     }
 }

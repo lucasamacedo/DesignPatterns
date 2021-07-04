@@ -7,21 +7,21 @@ namespace DesignPatterns2.Cap4
 {
     class RaizQuadrada : IExpressao
     {
-        private IExpressao exp;
+        public IExpressao Exp { get; private set; }
 
         public RaizQuadrada(IExpressao exp)
         {
-            this.exp = exp;
+            this.Exp = exp;
         }
 
-        public void Aceita(ImpressoraVisitor impressora)
+        public void Aceita(IVisitor impressora)
         {
-            throw new NotImplementedException();
+            impressora.ImprimeRaizQuadrada(this);
         }
 
         public int Avalia()
         {
-            return (int) Math.Sqrt(exp.Avalia());
+            return (int) Math.Sqrt(Exp.Avalia());
         }
     }
 }

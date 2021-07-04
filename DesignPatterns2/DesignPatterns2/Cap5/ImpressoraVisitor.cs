@@ -27,6 +27,32 @@ namespace DesignPatterns2.Cap5
 
             Console.Write(")");
         }
+        public void ImprimeMultiplicacao(Multiplicacao mult)
+        {
+            Console.Write("(");
+            mult.Esquerda.Aceita(this);
+
+            Console.Write(" * ");
+            mult.Direita.Aceita(this);
+
+            Console.Write(")");
+        }
+        public void ImprimeDivisao(Divisao div)
+        {
+            Console.Write("(");
+            div.Esquerda.Aceita(this);
+
+            Console.Write(" / ");
+            div.Direita.Aceita(this);
+
+            Console.Write(")");
+        }
+        public void ImprimeRaizQuadrada(RaizQuadrada rq)
+        {
+            Console.Write("\u221A(");
+            rq.Exp.Aceita(this);
+            Console.Write(")");
+        }
         public void ImprimeNumero(Numero numero)
         {
             Console.Write(numero.Valor);

@@ -34,9 +34,25 @@ namespace DesignPatterns2
             IExpressao direita = new Subtracao(new Numero(20), new Numero(10));
             IExpressao soma = new Soma(esquerda, direita);
 
-            Console.WriteLine(soma.Avalia());
             ImpressoraVisitor impressora = new ImpressoraVisitor();
+            PreFixaVisitor prefixa = new PreFixaVisitor();
+
             soma.Aceita(impressora);
+            Console.WriteLine(" = " + soma.Avalia());
+
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            esquerda = new Soma(new Numero(1), new Numero(10));
+            direita = new Divisao(new Numero(20), new Numero(10));
+            IExpressao exp = new Multiplicacao(esquerda, direita);
+            exp = new RaizQuadrada(exp);
+
+            exp.Aceita(impressora);
+            Console.WriteLine(" = " + exp.Avalia());
+            Console.WriteLine("Pre-fixa:");
+            exp.Aceita(prefixa);
+            Console.WriteLine(" = " + exp.Avalia());
+
         }
 
         private static void ExecutaAula4()
