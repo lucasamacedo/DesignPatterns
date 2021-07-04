@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DesignPatterns2.Cap1;
+using System;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace DesignPatterns2
 {
@@ -6,7 +9,10 @@ namespace DesignPatterns2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            IDbConnection conexao = new ConnectionFactory().GetConnection();
+
+            IDbCommand comando = conexao.CreateCommand();
+            comando.CommandText = "SELECT * FROM TABELA";
         }
     }
 }
