@@ -4,6 +4,7 @@ using DesignPatterns2.Cap3;
 using DesignPatterns2.Cap4;
 using DesignPatterns2.Cap5;
 using DesignPatterns2.Cap6;
+using DesignPatterns2.Cap7;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -32,6 +33,22 @@ namespace DesignPatterns2
             //ExecutaAula5();
 
             // Aula 6
+            //ExecutaAula6();
+
+            // Aula 7
+            FilaDeTrabalho fila = new FilaDeTrabalho();
+            Pedido pedido1 = new Pedido("Mauricio", 100.0);
+            Pedido pedido2 = new Pedido("Rico", 200.0);
+            fila.Adiciona(new PagaPedido(pedido1));
+            fila.Adiciona(new PagaPedido(pedido2));
+
+            fila.Adiciona(new FinalizaPedido(pedido1));
+
+            fila.Processa();
+        }
+
+        private static void ExecutaAula6()
+        {
             IMensagem mensagem = new MensagemAdministrativa("Lucas");
             IEnviador enviador = new EnviaPorSMS();
 
