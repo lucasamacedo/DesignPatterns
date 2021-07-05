@@ -6,6 +6,7 @@ using DesignPatterns2.Cap5;
 using DesignPatterns2.Cap6;
 using DesignPatterns2.Cap7;
 using DesignPatterns2.Cap8;
+using DesignPatterns2.Cap9;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -42,6 +43,40 @@ namespace DesignPatterns2
             //ExecutaAula7();
 
             // Aula 8
+            //ExecutaAula8();
+
+            // Aula 9 (Não vai compilar)
+            //ExecutaAula9();
+        }
+
+        private static void ExecutaAula9()
+        {
+            //// Exemplo como seria antes
+            //String cpf = "1234";
+
+            //Cliente cliente = new ClienteDAO().BuscaPorCpf(cpf);
+
+            //Fatura fatura = new Fatura(cliente, 5000);
+
+            //Cobranca cobranca = new Cobranca(Tipo.Boleto, fatura);
+            //cobranca.Emite();
+
+            //ContatoCliente contato = new ContatoCliente(cliente, cobranca);
+            //contato.Dispara();
+
+            //// Como ficaria depois
+
+            //String cpf = "1234";
+
+            //EmpresaFacade facade = new EmpresaFacadeSingleton().Instancia;
+            //Cliente cliente = facade.BuscaCliente(cpf);
+
+            //var fatura = facade.CriaFatura(cliente, 5000);
+            //facade.GeraCobranca(tipo.Boleto, fatura);
+        }
+
+        private static void ExecutaAula8()
+        {
             Cliente cliente = new Cliente();
             cliente.Nome = "Lucas";
             cliente.Endereco = "Rua Verde";
