@@ -5,11 +5,14 @@ using DesignPatterns2.Cap4;
 using DesignPatterns2.Cap5;
 using DesignPatterns2.Cap6;
 using DesignPatterns2.Cap7;
+using DesignPatterns2.Cap8;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq.Expressions;
+using System.Xml.Serialization;
 
 namespace DesignPatterns2
 {
@@ -36,6 +39,21 @@ namespace DesignPatterns2
             //ExecutaAula6();
 
             // Aula 7
+            //ExecutaAula7();
+
+            // Aula 8
+            Cliente cliente = new Cliente();
+            cliente.Nome = "Lucas";
+            cliente.Endereco = "Rua Verde";
+            cliente.DataNascimento = DateTime.Now;
+
+            String xml = new GeradorXml().GeraXml(cliente);
+
+            Console.WriteLine(xml);
+        }
+
+        private static void ExecutaAula7()
+        {
             FilaDeTrabalho fila = new FilaDeTrabalho();
             Pedido pedido1 = new Pedido("Mauricio", 100.0);
             Pedido pedido2 = new Pedido("Rico", 200.0);
